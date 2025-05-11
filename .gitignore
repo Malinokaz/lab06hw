@@ -1,47 +1,13 @@
-# CMake build directories
-build/
-cmake-build-*/
-
-# CMake-generated files
+CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles/
+CMakeScripts/
+Testing/
 Makefile
 cmake_install.cmake
 install_manifest.txt
-
-# Compiled object files & libraries
-*.o
-*.obj
-*.a
-*.lib
-*.so
-*.dll
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.run
-*.app
-
-# IDE / Editor folders
-.vscode/
-.idea/
-*.code-workspace
-
-# CLion / JetBrains-specific
-cmake-build-debug/
-cmake-build-release/
-cmake-build-*/
-
-# Backup & temporary files
-*~
-*.swp
-*.swo
-*.tmp
-*.log
-
-# OS files
-.DS_Store
-Thumbs.db
-ehthumbs.db
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+CMakeUserPresets.json
+build/
