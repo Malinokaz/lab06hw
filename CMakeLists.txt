@@ -30,8 +30,7 @@ set(CPACK_PACKAGE_NAME "${PROJECT_NAME}")
 set(CPACK_PACKAGE_VERSION "${PROJECT_VERSION}")
 set(CPACK_PACKAGE_DESCRIPTION "Equation solver app")
 set(CPACK_PACKAGE_VENDOR "Vladimir")
-set(CPACK_PACKAGE_CONTACT "malinokaz@ya.ru)
-
+set(CPACK_PACKAGE_CONTACT "malinokaz@ya.ru")
 
 if(WIN32)
     set(CPACK_GENERATOR "ZIP")
