@@ -24,7 +24,7 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/artifacts)
 add_subdirectory(solver_lib)
 add_subdirectory(formatter_ex_lib)
 add_subdirectory(formatter_lib)
-add_subdirectory(solver)
+
 
 set(CPACK_PACKAGE_NAME "${PROJECT_NAME}")
 set(CPACK_PACKAGE_VERSION "${PROJECT_VERSION}")
