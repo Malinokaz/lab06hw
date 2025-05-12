@@ -2,9 +2,9 @@ name: All Platforms Build
 
 on:
   push:
-    branches: [ main ] 
+    branches: [main] 
   pull_request:
-    branches: [ main] 
+    branches: [main] 
 
 jobs:
   build-linux:
@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Install dependencies
         run: |
