@@ -33,7 +33,7 @@ set(CPACK_PACKAGE_VENDOR "Vladimir")
 set(CPACK_PACKAGE_CONTACT "malinokaz@ya.ru")
 
 if(WIN32)
-    set(CPACK_GENERATOR "TGZ;ZIP;NSIS")
+    set(CPACK_GENERATOR "TGZ;ZIP")
 elseif(APPLE)
     set(CPACK_GENERATOR "TGZ;ZIP;DragNDrop")
 else()
