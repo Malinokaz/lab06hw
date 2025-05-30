@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y cmake build-essential
+          sudo apt-get install -y cmake build-essential rpm
 
       - name: Configure CMake
         run: cmake -B build -DCMAKE_BUILD_TYPE=Release
@@ -24,15 +24,18 @@ jobs:
       - name: Build project
         run: cmake --build build
 
-      - name: Package with CPack
+      - name: Package with CPack (.deb and .rpm)
         run: |
           cd build
-          cpack
+          cpack -G DEB
+          cpack -G RPM
 
       - name: Upload to GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          files: build/*.tar.gz
+          files: |
+            build/*.deb
+            build/*.rpm
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -74,14 +77,14 @@ jobs:
       - name: Build project
         run: cmake --build build
 
-      - name: Package with CPack
+      - name: Package with CPack (.dmg)
         run: |
           cd build
-          cpack
+          cpack -G DragNDrop
 
       - name: Upload to GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          files: build/*.zip
+          files: build/*.dmg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
